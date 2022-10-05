@@ -5,35 +5,38 @@
 import numpy as np
 
 
-def random_predict(number: int = 1) -> int:
+def random_predict(number:int=np.random.randint(1, 101)) -> int:
     """Рандомно угадываем число
 
     Args:
-        number (int, optional): Загаданное число. Defaults to 1.
+        number (int, optional): Загаданное число. По умолчанию рандомно загадывается компьютером в диапазоне 1-100.
 
     Returns:
-        int: Число попыток
+        int: Число попыток 
     """
-    
-    number = np.random.randint(1, 101)  # число рандомно загадали
-    #print(f'загадали: {number}')
-
+    print('Загадано число: ',number)
     count = 0
-    i = 0
+    lst_num = list(range(1, 101))
+
     while True:
         count += 1
-        if 50 > number >= 1 :# последовательный перебор в диапазоне 1-50 до загаданного числа
-            seach_number = 1 + i 
-            i += 1 
-            if seach_number == number:
-                #print(f'отгадали: {number}, попыток: {count}')
-                break  # выход из цикла если угадали
-        else:# последовательный перебор в диапазоне 50-100 до загаданного числа
-            seach_number = 50 + i 
-            i += 1 
-            if seach_number == number:
-                #print(f'отгадали: {number}, попыток: {count}')
-                break  # выход из цикла если угадали
+        predict_number = int(np.mean(lst_num))
+        print('Попытка: ', count, ', предпологаемое число: ', predict_number)
+        half = round(int(len(lst_num))/2)
+      #print('Половинная отсечка: ', half)
+        
+        if number == predict_number:
+            print(f'отгадано число: {number}, попыток: {count}')
+            break
+        elif predict_number < number:
+            lst_num = lst_num[half:]
+            print(f'интервал поиска от {lst_num[0]}') 
+        else:
+            lst_num = lst_num[:half]
+            print('интервал поиска до ',lst_num[-1]) 
+        if len(lst_num) == 0:
+            break
+
     return count
     
 
@@ -53,8 +56,7 @@ def score_game(random_predict) -> int:
 
     score = int(np.mean(count_ls))
     print(f"Ваш алгоритм угадывает число в среднем за:{score} попыток")
-    return score
-
+    
 
 if __name__ == "__main__":
     # RUN
