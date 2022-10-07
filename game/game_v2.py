@@ -14,29 +14,23 @@ def random_predict(number:int=np.random.randint(1, 101)) -> int:
     Returns:
         int: Число попыток 
     """
-    print('Загадано число: ',number)
     count = 0
-    lst_num = list(range(1, 101))
+    n = number // 10
+    lst_num = list(range(n * 10, (n + 1)*10)) # интерапл десятка
 
     while True:
         count += 1
         predict_number = int(np.mean(lst_num))
-        print('Попытка: ', count, ', предпологаемое число: ', predict_number)
         half = round(int(len(lst_num))/2)
-      #print('Половинная отсечка: ', half)
         
         if number == predict_number:
-            print(f'отгадано число: {number}, попыток: {count}')
             break
         elif predict_number < number:
             lst_num = lst_num[half:]
-            print(f'интервал поиска от {lst_num[0]}') 
         else:
             lst_num = lst_num[:half]
-            print('интервал поиска до ',lst_num[-1]) 
         if len(lst_num) == 0:
             break
-
     return count
     
 
@@ -56,7 +50,6 @@ def score_game(random_predict) -> int:
 
     score = int(np.mean(count_ls))
     print(f"Ваш алгоритм угадывает число в среднем за:{score} попыток")
-    
 
 if __name__ == "__main__":
     # RUN
