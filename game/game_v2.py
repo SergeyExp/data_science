@@ -16,7 +16,7 @@ def random_predict(number:int=np.random.randint(1, 101)) -> int:
     """
     count = 0
     n = number // 10
-    lst_num = list(range(n * 10, (n + 1)*10)) # интерапл десятка
+    lst_num = list(range(n * 10, (n + 1)*10)) # интервал десятка
 
     while True:
         count += 1
