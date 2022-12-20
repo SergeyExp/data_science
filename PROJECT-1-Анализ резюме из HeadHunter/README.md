@@ -6,6 +6,7 @@
 [3. Основные этапы работы](README.md#Основные-этапы-работ)  
 [4. Результат](README.md#Результат)    
 [5. Выводы](README.md#Выводы) 
+![image](https://user-images.githubusercontent.com/114934891/208735359-2dcb3ab7-35b1-4b43-ba98-66dd04a7c270.png)
 
 ### Описание проекта
 
