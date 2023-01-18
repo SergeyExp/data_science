@@ -9,6 +9,8 @@ Python,Jupyter Notebook. Доп. визуал Superset.
 Работа с базой данных и выполнение SQL-запросов средствами Python.
 Сначала нам необходимо понять, что из себя представляют данные и насколько они соответствуют целям проекта. Эта часть работы над ML-проектом называется Data Understanding, или анализ данных. 
 
-![image](https://user-images.githubusercontent.com/114934891/213178746-359d57a4-6bb6-4336-b0b0-0ec2bf1a3cd2.png)
+![image](https://user-images.githubusercontent.com/114934891/213179450-6e92abc3-165d-416a-88cc-7a5759799dfd.png) ![image](https://user-images.githubusercontent.com/114934891/213179493-b2b1edea-a1e0-46e8-b6d9-3a15d43248bf.png)
+
+
 
 
