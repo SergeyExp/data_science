@@ -1,6 +1,6 @@
 # Проект 2. Анализ резюме из HeadHunter
 
-
+![image](https://user-images.githubusercontent.com/114934891/213179450-6e92abc3-165d-416a-88cc-7a5759799dfd.png) ![image](https://user-images.githubusercontent.com/114934891/213179493-b2b1edea-a1e0-46e8-b6d9-3a15d43248bf.png)
 ## Оглавление  
 [1. Описание проекта](README.md#Описание-проекта)  
 [2. Краткая информация о данных](README.md#Краткая-информация-о-данных)  
